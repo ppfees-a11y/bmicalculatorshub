@@ -1,0 +1,54 @@
+:root{
+  --bg:#f5f7fb;--card:#ffffff;--text:#172033;--muted:#667085;
+  --primary:#2457d6;--primary-dark:#193fa3;--border:#d8deea;
+  --good:#16794d;--warn:#a15c00;--bad:#b42318;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);
+  color:var(--text);line-height:1.6;
+}
+header{background:#fff;border-bottom:1px solid var(--border)}
+.wrap{max-width:1000px;margin:auto;padding:0 20px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 0;flex-wrap:wrap}
+.brand{font-size:1.25rem;font-weight:800;color:var(--text);text-decoration:none}
+nav a{color:var(--text);text-decoration:none;margin-left:18px;font-weight:600}
+nav a:hover{color:var(--primary)}
+.hero{padding:52px 0 26px;text-align:center}
+.hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;margin:0 0 14px}
+.hero p{max-width:700px;margin:0 auto;color:var(--muted);font-size:1.08rem}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:start;padding:26px 0 50px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;box-shadow:0 8px 24px rgba(16,24,40,.05)}
+.card h2,.card h3{margin-top:0}
+label{display:block;font-weight:700;margin-bottom:7px}
+input,select{
+  width:100%;padding:12px;border:1px solid #b9c2d0;border-radius:9px;
+  font-size:1rem;background:#fff
+}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:16px}
+button{
+  width:100%;padding:13px 16px;border:0;border-radius:9px;background:var(--primary);
+  color:#fff;font-size:1.03rem;font-weight:800;cursor:pointer
+}
+button:hover{background:var(--primary-dark)}
+.result{margin-top:18px;padding:18px;border-radius:12px;background:#eef3ff;display:none}
+.result strong{font-size:1.4rem}
+.note{font-size:.92rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin-top:12px}
+th,td{border:1px solid var(--border);padding:10px;text-align:left}
+th{background:#f0f3f8}
+.content{padding:40px 0}
+.content h1{line-height:1.2}
+.content h2{margin-top:32px}
+footer{margin-top:50px;background:#111827;color:#d0d5dd;padding:30px 0}
+footer a{color:#fff;text-decoration:none;margin-right:16px}
+.ad-slot{
+  border:1px dashed #aab4c3;background:#fafbfc;color:#667085;text-align:center;
+  padding:18px;border-radius:10px;margin:20px 0;font-size:.9rem
+}
+@media(max-width:760px){
+  .grid{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr}
+  nav a{margin-left:10px}
+}
