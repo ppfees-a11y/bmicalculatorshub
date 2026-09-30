@@ -1,125 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Adult BMI Calculator | BMICalculatorsHub</title><meta name="description" content="Free adult BMI calculator using U.S. or metric measurements. Calculate BMI, see the standard adult BMI category, and estimate the weight range corresponding to BMI 18.5–24.9."><link rel="stylesheet" href="style.css"></head><body>
+<header><div class="wrap top"><a class="brand" href="index.html">BMICalculatorsHub</a><nav><a href="#calculator">Calculator</a><a href="#guide">BMI Guide</a><a href="#limitations">Limitations</a><a href="#faq">FAQ</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></div></header>
+<main class="wrap"><section class="hero"><p class="eyebrow">FREE ADULT BMI TOOL</p><h1>Adult BMI Calculator</h1><p class="lead">Calculate body mass index using pounds and feet/inches or kilograms and centimeters, then see the standard adult BMI category and corresponding healthy-weight range for your height.</p><p class="updated">For adults age 20 and older. BMI is a screening measure, not a diagnosis.</p></section>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+<section class="card" id="calculator"><h2>Calculate Your BMI</h2><div class="switch"><button class="unit active" data-unit="us">U.S. Units</button><button class="unit" data-unit="metric">Metric Units</button></div>
+<div id="usFields" class="grid"><label>Weight (lb)<input id="pounds" type="number" min="1" step=".1" value="180"></label><label>Height (feet)<input id="feet" type="number" min="1" step="1" value="5"></label><label>Height (inches)<input id="inches" type="number" min="0" max="11.99" step=".1" value="10"></label></div>
+<div id="metricFields" class="grid hidden"><label>Weight (kg)<input id="kg" type="number" min="1" step=".1" value="81.6"></label><label>Height (cm)<input id="cm" type="number" min="50" step=".1" value="177.8"></label></div>
+<button id="calculate">Calculate BMI</button><p id="msg"></p>
+<div class="results"><div><span>Your BMI</span><strong id="bmi">—</strong></div><div><span>Adult BMI category</span><strong id="category">—</strong></div><div><span>Weight range for BMI 18.5–24.9</span><strong id="range">—</strong></div></div>
+<p class="note">The weight range is a mathematical range based only on height and the standard adult BMI interval. It is not a personalized target weight or medical recommendation.</p></section>
 
-<title>BMI Calculator – Calculate Your Body Mass Index</title>
-<meta name="description" content="Use our free BMI calculator to estimate your body mass index and healthy weight range using feet, inches, pounds, centimeters, or kilograms.">
-<link rel="canonical" href="https://bmicalculatorshub.com/">
-<!-- Paste your AdSense code immediately below this line after Google gives it to you. -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5287196493103465"
-     crossorigin="anonymous"></script>
-</head>
-<body>
+<section class="content" id="guide"><h2>What BMI Measures</h2><p>Body mass index, or BMI, is a calculation based on a person's weight relative to height. For adults, it is commonly used as a quick screening measure because it requires only two measurements and can help identify weight ranges that may warrant a broader health assessment.</p>
+<h3>Adult BMI Categories</h3><div class="tablewrap"><table><thead><tr><th>BMI</th><th>Standard adult category</th></tr></thead><tbody><tr><td>Below 18.5</td><td>Underweight</td></tr><tr><td>18.5–24.9</td><td>Healthy weight</td></tr><tr><td>25.0–29.9</td><td>Overweight</td></tr><tr><td>30.0 or higher</td><td>Obesity</td></tr></tbody></table></div>
+<h3>How BMI Is Calculated</h3><p>With metric measurements, BMI equals weight in kilograms divided by height in meters squared. With U.S. measurements, BMI equals weight in pounds divided by height in inches squared, multiplied by 703.</p>
+<h3>Why Height Matters So Much</h3><p>Height is squared in the BMI formula. Two adults at the same weight can therefore have very different BMI values if their heights differ. Likewise, the weight interval corresponding to a given BMI range changes with height.</p></section>
 
-<header>
-  <div class="wrap topbar">
-    <a class="brand" href="index.html">BMI Calculators Hub</a>
-    <nav>
-      <a href="index.html">Calculator</a>
-      <a href="about.html">About</a>
-      <a href="privacy.html">Privacy</a>
-    </nav>
-  </div>
-</header>
+<section class="content" id="limitations"><h2>Important Limitations of BMI</h2><p>BMI does not directly measure body fat. It also does not distinguish fat mass from muscle, bone, or other lean tissue. A muscular person can have a relatively high BMI without having the same body composition as another person with the identical BMI.</p>
+<p>BMI also does not describe where body fat is carried, fitness, blood pressure, blood glucose, cholesterol, nutrition, mobility, or many other factors that can matter to health. For an individual, BMI is best understood as one screening measure rather than a complete health assessment.</p>
+<h3>Adults vs. Children and Teens</h3><p>The standard adult category table on this page is intended for adults age 20 and older. BMI for children and teens is interpreted differently using age- and sex-specific growth charts and percentiles. This calculator should not be used to classify a child or teenager.</p>
+<h3>Pregnancy</h3><p>Standard adult BMI interpretation is not designed to evaluate expected weight changes during pregnancy. Pregnancy-related weight questions should be discussed with an appropriate healthcare professional.</p></section>
 
-<main>
-  <section class="hero wrap">
-    <h1>Free BMI Calculator</h1>
-    <p>Calculate your body mass index using U.S. or metric measurements and see the standard adult BMI category.</p>
-  </section>
+<section class="content"><h2>BMI Calculation Examples</h2><p>These examples show the arithmetic and are not recommendations about what any individual should weigh.</p><div class="tablewrap"><table><thead><tr><th>Example</th><th>Calculation</th><th>BMI</th></tr></thead><tbody><tr><td>150 lb, 5 ft 5 in</td><td>150 ÷ 65² × 703</td><td>About 25.0</td></tr><tr><td>180 lb, 5 ft 10 in</td><td>180 ÷ 70² × 703</td><td>About 25.8</td></tr><tr><td>70 kg, 1.75 m</td><td>70 ÷ 1.75²</td><td>About 22.9</td></tr></tbody></table></div></section>
 
-  <div class="wrap">
-    <div class="ad-slot">Advertisement space — activates after AdSense approval</div>
-  </div>
+<section class="content" id="faq"><h2>Frequently Asked Questions</h2><h3>Is BMI a diagnosis?</h3><p>No. BMI is a screening measure. A BMI number by itself cannot diagnose a health condition or describe an individual's overall health.</p><h3>Does BMI measure body fat?</h3><p>No. BMI is calculated from height and weight. It does not directly measure body-fat percentage or distinguish fat from muscle.</p><h3>Who are the adult categories for?</h3><p>The categories shown here are for adults age 20 and older. Children and teens require age- and sex-specific interpretation.</p><h3>Why does the calculator show a weight range?</h3><p>The range shows the weights at your entered height that mathematically correspond to BMI values from 18.5 through 24.9. It is informational, not an individualized goal.</p><h3>Should I make health decisions from BMI alone?</h3><p>No. If a BMI result raises a health question, it can be discussed alongside other relevant information with a qualified healthcare professional.</p><h3>Does BMICalculatorsHub store my weight or height?</h3><p>The calculation runs in your browser. The site does not require an account or ask you to submit your height and weight to us.</p></section>
 
-  <section class="wrap grid">
-    <div class="card">
-      <h2>Calculate Your BMI</h2>
-      <div class="field">
-        <label for="units">Measurement system</label>
-        <select id="units">
-          <option value="us">U.S. units — feet, inches, pounds</option>
-          <option value="metric">Metric — centimeters, kilograms</option>
-        </select>
-      </div>
-
-      <div id="usFields">
-        <div class="row">
-          <div class="field">
-            <label for="feet">Height — feet</label>
-            <input id="feet" type="number" min="1" max="8" placeholder="5">
-          </div>
-          <div class="field">
-            <label for="inches">Height — inches</label>
-            <input id="inches" type="number" min="0" max="11.99" step="0.1" placeholder="10">
-          </div>
-        </div>
-        <div class="field">
-          <label for="pounds">Weight — pounds</label>
-          <input id="pounds" type="number" min="1" step="0.1" placeholder="180">
-        </div>
-      </div>
-
-      <div id="metricFields" style="display:none">
-        <div class="field">
-          <label for="centimeters">Height — centimeters</label>
-          <input id="centimeters" type="number" min="50" max="275" step="0.1" placeholder="178">
-        </div>
-        <div class="field">
-          <label for="kilograms">Weight — kilograms</label>
-          <input id="kilograms" type="number" min="1" step="0.1" placeholder="82">
-        </div>
-      </div>
-
-      <button id="calculateBtn">Calculate BMI</button>
-      <div class="result" id="result" aria-live="polite"></div>
-      <p class="note">BMI is a screening measurement, not a diagnosis. Individual health varies.</p>
-    </div>
-
-    <aside class="card">
-      <h2>Adult BMI Categories</h2>
-      <table>
-        <tr><th>BMI</th><th>Category</th></tr>
-        <tr><td>Below 18.5</td><td>Underweight</td></tr>
-        <tr><td>18.5–24.9</td><td>Healthy weight</td></tr>
-        <tr><td>25.0–29.9</td><td>Overweight</td></tr>
-        <tr><td>30.0 or higher</td><td>Obesity</td></tr>
-      </table>
-      <h3 style="margin-top:26px">How BMI is calculated</h3>
-      <p>U.S. formula: weight in pounds divided by height in inches squared, multiplied by 703.</p>
-      <p>Metric formula: weight in kilograms divided by height in meters squared.</p>
-    </aside>
-  </section>
-
-  <section class="wrap card">
-    <h2>What is BMI?</h2>
-    <p>Body mass index is a height-to-weight calculation commonly used to screen adults for weight categories. It does not directly measure body fat, muscle mass, bone density, or overall health.</p>
-
-    <h2>Healthy weight range</h2>
-    <p>After calculating your BMI, this tool also estimates the weight range corresponding to a BMI of 18.5 through 24.9 for your entered height.</p>
-
-    <h2>Who should use caution with BMI?</h2>
-    <p>BMI may be less informative for highly muscular people, older adults with significant muscle loss, pregnant people, children, and people whose health conditions affect body composition. A healthcare professional can interpret the result in context.</p>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <p><strong>BMI Calculators Hub</strong></p>
-    <p>
-      <a href="about.html">About</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms</a>
-      <a href="disclaimer.html">Medical Disclaimer</a>
-    </p>
-    <p class="note">© 2026 BMI Calculators Hub. All rights reserved.</p>
-  </div>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
+<section class="content"><h2>About BMICalculatorsHub</h2><p>BMICalculatorsHub is a free educational calculator designed to make the standard adult BMI calculation transparent and easy to understand. It supports both U.S. and metric measurements and explains what the result can—and cannot—tell you.</p></section></main>
+<footer><div class="wrap"><p>Educational calculator only. Not a substitute for professional medical advice, diagnosis, or treatment.</p><p class="creator">Created by James Gore</p><p><a href="index.html">Calculator</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p><p>© <span id="year"></span> BMICalculatorsHub</p></div></footer><script src="script.js"></script></body></html>
