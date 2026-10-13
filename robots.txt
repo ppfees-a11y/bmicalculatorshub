@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://bmicalculatorshub.com/sitemap.xml
