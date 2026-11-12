@@ -1,0 +1,5 @@
+BMICalculatorsHub Research Upgrade | November 2026
+Baseline: BMI_MAX_Navigation_Corrected_Verified.zip.
+Benchmark: CDC Adult BMI Calculator and CDC BMI FAQ; compared unit handling, categories, caveats.
+New: two-measurement BMI comparison with CSV export; reverse BMI weight reference; unit converter; expanded methodology.
+Caveat: No child BMI percentile tool; adult BMI only. No claim of AdSense approval.
